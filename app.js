@@ -30,7 +30,7 @@ var controller = (function(budegetCtrl, UICtrl){
     var delta = budegetCtrl.publicTest(5);
 
     return {
-        anotherPublic: function(){
+      anotherPublic: function(){
         console.log(delta);
     }
   }
