@@ -1,8 +1,8 @@
 # Budget-Management
 Javascript
 
-
 ## Planning: Step 1:
+### Stack of tasks:
 
     - Add event handler
     - Get input values
