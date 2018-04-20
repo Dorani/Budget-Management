@@ -16,13 +16,15 @@ var budgetController = (function(){
 //UI Controller
 var UIController = (function(){
       return {
-        getinput: function(){
-            //3 input values stored in these variables
-            var type = document.querySelector(.'add__type').value;//read the value,income or expens
-            var description = document.querySelector('.add__description').value;
-            var value = doument.querySelector('add__value').value;
+        getInput: function(){
+          return {
+            //3 input values stored as parameters
+            type: document.querySelector(.'add__type').value,//read the value,income or expens
+            description: document.querySelector('.add__description').value,
+            value: doument.querySelector('add__value').value
+          };
         }
-      }
+      };
   });
 
 //Global App Controller
