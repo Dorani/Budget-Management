@@ -16,8 +16,8 @@ var budgetController = (function(){
 var UIController = (function(){
       //some code
   });
-  //bridging the UI controller and the budget Controller together
 
+//bridging the UI controller and the budget Controller together
 var controller = (function(budegetCtrl, UICtrl){
       //some code
 })(budgetController, UIController);
