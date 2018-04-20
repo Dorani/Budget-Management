@@ -20,18 +20,21 @@ var UIController = (function(){
 
 //Global App Controller
 var controller = (function(budegetCtrl, UICtrl){
-      document.querySelector('.add__btn').addEventListener('click', function(){
+
+      var ctrlAddItem = function(){
         //1st get the field input Data
         //2. add item to the budget Controller
         //3. add the item to the UI
         //4. calculate the budget
         //5. display the budget on the UI
-      });
-      //when user does not click, rather presses key after input
-      //inspect to see which reference we will use(keycode)
+        console.log('it works');
+      }
+
+      document.querySelector('.add__btn').addEventListener('click', ctrlAddItem);
+
       document.addEventListener('keypress', function(event){
           if(event.keyCode === 13 || event.which === 13){//return key
-            console.log('enter was pressed');
+            ctrlAddItem();
           }
       });
 })(budgetController, UIController);
