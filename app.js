@@ -15,13 +15,20 @@ var budgetController = (function(){
 
 //UI Controller
 var UIController = (function(){
+      //central place where all strings are stored, we can then retrieve them and change them
+      var Domstrings = {
+        inputType: '.add__type',
+        description: '.add__description',
+        value: '.add__value'
+      }
+
       return {
         getInput: function(){
           return {
             //3 input values stored as parameters
-            type: document.querySelector('.add__type').value,//read the value,income or expens
-            description: document.querySelector('.add__description').value,
-            value: document.querySelector('.add__value').value
+            type: document.querySelector(Domstrings.inputType).value,//read the value,income or expens
+            description: document.querySelector(Domstrings.description).value,
+            value: document.querySelector(Domstrings.value).value
           };
         }
       };
