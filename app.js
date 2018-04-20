@@ -19,29 +19,33 @@ var UIController = (function(){
         getInput: function(){
           return {
             //3 input values stored as parameters
-            type: document.querySelector(.'add__type').value,//read the value,income or expens
+            type: document.querySelector('.add__type').value,//read the value,income or expens
             description: document.querySelector('.add__description').value,
-            value: doument.querySelector('add__value').value
+            value: document.querySelector('.add__value').value
           };
         }
       };
-  });
+  })();
 
 //Global App Controller
 var controller = (function(budegetCtrl, UICtrl){
 
       var ctrlAddItem = function(){
-        //1st get the field input Data
+
+        //1. get the field input Data
+        var input = UICtrl.getInput();
+        console.log(input);
         //2. add item to the budget Controller
         //3. add the item to the UI
         //4. calculate the budget
         //5. display the budget on the UI
-        console.log('it works');
+
       }
 
       document.querySelector('.add__btn').addEventListener('click', ctrlAddItem);
 
       document.addEventListener('keypress', function(event){
+
           if(event.keyCode === 13 || event.which === 13){//return key
             ctrlAddItem();
           }
