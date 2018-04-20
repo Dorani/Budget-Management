@@ -30,6 +30,11 @@ var UIController = (function(){
             description: document.querySelector(Domstrings.description).value,
             value: document.querySelector(Domstrings.value).value
           };
+        },
+
+        getDomstrings: function(){
+          //exposing Domstrings into the public
+            return Domstrings;
         }
       };
   })();
@@ -37,6 +42,7 @@ var UIController = (function(){
 //Global App Controller
 var controller = (function(budegetCtrl, UICtrl){
 
+      var Dom = UICtrl.getDomstrings();//now inside of this Dom var, we also have the Domstrings, since we exposed them publicly
       var ctrlAddItem = function(){
 
         //1. get the field input Data
