@@ -9,30 +9,14 @@
 
 
 var budgetController = (function(){
-
-  var x = 23;
-  var add = function(a){
-  return x + a;
-  }
-  return {
-    publicTest: function(b) {
-      console.log(add(b));
-    }
-  }
+    //some code
 })();
 
 
 var UIController = (function(){
       //some code
   });
-  //bridging the UI and the budgetController together
+  //bridging the UI controller and the budget Controller together
 var controller = (function(budegetCtrl, UICtrl){
-    var delta = budegetCtrl.publicTest(5);
-
-    return {
-      anotherPublic: function(){
-        console.log(delta);
-    }
-  }
-
+      //some code
 })(budgetController, UIController);
