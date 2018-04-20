@@ -8,16 +8,23 @@
   //publicTest
 //------------------------------------------------------------------------------
 
+//Budget Controller
 var budgetController = (function(){
     //some code
 })();
 
-
+//UI Controller
 var UIController = (function(){
       //some code
   });
 
-//bridging the UI controller and the budget Controller together
+//Global App Controller
 var controller = (function(budegetCtrl, UICtrl){
-      //some code
+      document.querySelector('.add__btn').addEventListener('click', function(){
+        //1st get the field input Data
+        //2. add item to the budget Controller
+        //3. add the item to the UI
+        //4. calculate the budget
+        //5. display the budget on the UI
+      })
 })(budgetController, UIController);
