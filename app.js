@@ -26,5 +26,12 @@ var controller = (function(budegetCtrl, UICtrl){
         //3. add the item to the UI
         //4. calculate the budget
         //5. display the budget on the UI
-      })
+      });
+      //when user does not click, rather presses key after input
+      //inspect to see which reference we will use(keycode)
+      document.addEventListener('keypress', function(event){
+          if(event.keyCode === 13 || event.which === 13){//return key
+            console.log('enter was pressed');
+          }
+      });
 })(budgetController, UIController);
