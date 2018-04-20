@@ -6,7 +6,7 @@
   //this object gets assigned to the budgetController variable after the function returns
   //so... the budgetController variable is simply an object containing the method called:
   //publicTest
-
+//------------------------------------------------------------------------------
 
 var budgetController = (function(){
     //some code
@@ -17,6 +17,7 @@ var UIController = (function(){
       //some code
   });
   //bridging the UI controller and the budget Controller together
+
 var controller = (function(budegetCtrl, UICtrl){
       //some code
 })(budgetController, UIController);
