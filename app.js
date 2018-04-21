@@ -43,7 +43,17 @@ var UIController = (function(){
 //Global App Controller
 var controller = (function(budegetCtrl, UICtrl){
 
-      var Dom = UICtrl.getDomstrings();//now inside of this Dom var, we also have the Domstrings, since we exposed them publicly
+      var setupEventListeners = function(){
+
+        var Dom = UICtrl.getDomstrings();//now inside of this Dom var, we also have the Domstrings, since we exposed them publicly
+        document.querySelector(Dom.inputBtn).addEventListener('click', ctrlAddItem);
+        document.addEventListener('keypress', function(event){
+            if(event.keyCode === 13 || event.which === 13){//return key
+              ctrlAddItem();
+            }
+        });
+      }
+
       var ctrlAddItem = function(){
 
         //1. get the field input Data
@@ -54,14 +64,5 @@ var controller = (function(budegetCtrl, UICtrl){
         //4. calculate the budget
         //5. display the budget on the UI
 
-      }
-
-      document.querySelector(Dom.inputBtn).addEventListener('click', ctrlAddItem);
-
-      document.addEventListener('keypress', function(event){
-
-          if(event.keyCode === 13 || event.which === 13){//return key
-            ctrlAddItem();
-          }
-      });
+      };
 })(budgetController, UIController);
