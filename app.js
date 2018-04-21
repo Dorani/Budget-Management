@@ -45,11 +45,11 @@ var controller = (function(budegetCtrl, UICtrl){
 
       var setupEventListeners = function(){
 
-        var Dom = UICtrl.getDomstrings();//now inside of this Dom var, we also have the Domstrings, since we exposed them publicly
-        document.querySelector(Dom.inputBtn).addEventListener('click', ctrlAddItem);
-        document.addEventListener('keypress', function(event){
-            if(event.keyCode === 13 || event.which === 13){//return key
-              ctrlAddItem();
+          var Dom = UICtrl.getDomstrings();//now inside of this Dom var, we also have the Domstrings, since we exposed them publicly
+          document.querySelector(Dom.inputBtn).addEventListener('click', ctrlAddItem);
+          document.addEventListener('keypress', function(event){
+              if(event.keyCode === 13 || event.which === 13){//return key
+                ctrlAddItem();
             }
         });
       }
