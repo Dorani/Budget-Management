@@ -65,4 +65,11 @@ var controller = (function(budegetCtrl, UICtrl){
         //5. display the budget on the UI
 
       };
+
+      return {
+        init: function(){
+          console.log('app has started');
+          setupEventListeners();
+        }
+      };
 })(budgetController, UIController);
