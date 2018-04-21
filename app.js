@@ -73,3 +73,7 @@ var controller = (function(budegetCtrl, UICtrl){
         }
       };
 })(budgetController, UIController);
+
+controller.init();//without this line of code, nothing will happen
+//without event lsners we can not input Data
+//without data we have no app
