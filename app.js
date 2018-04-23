@@ -34,6 +34,18 @@ var budgetController = (function(){
       }
     };
 
+    return {
+        addItem: function(type, des, val){//method that takes in type, description and value of our input
+            var newItem;
+            if(type === 'exp') {
+              newItem new Expense(id, des, val);
+            } else if (type === 'inc') {
+              newItem = new Income(id, des, val);
+            }
+
+        }
+    };
+
 })();
 
 //UI Controller
