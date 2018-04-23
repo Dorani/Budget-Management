@@ -36,12 +36,16 @@ var budgetController = (function(){
 
     return {
         addItem: function(type, des, val){//method that takes in type, description and value of our input
-            var newItem;
+            var newItem, id;
             //create new id
-            id = data.allItems[type][data.allItems[type].length -1].id + 1;
+            if (data.allItems[type].length > 0){
+                id = data.allItems[type][data.allItems[type].length -1].id + 1;
+            } else {
+              id = 0;
+            }
             //create new item based on 'income' or 'expense' type
             if(type === 'exp') {
-              newItem new Expense(id, des, val);
+              newItem = new Expense(id, des, val);
             } else if (type === 'inc') {
               newItem = new Income(id, des, val);
             }
@@ -49,6 +53,10 @@ var budgetController = (function(){
             data.allItems[type].push(newItem);//type is exp or inc, which are the same in our data structure, then push interval
             //return the new element
             return newItem;
+        },
+
+        testing: function(){
+          console.log(data);
         }
     };
 
