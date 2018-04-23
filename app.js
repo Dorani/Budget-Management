@@ -22,6 +22,18 @@ var budgetController = (function(){
       this.value = value;
     };
 
+//data structure ready to receive data
+    var data = {
+      allItems: {
+        exp: [],
+        inc: []
+      },
+      totals: {
+        exp: 0,
+        inc: 0
+      }
+    }
+
 })();
 
 //UI Controller
