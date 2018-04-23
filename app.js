@@ -32,7 +32,7 @@ var budgetController = (function(){
         exp: 0,
         inc: 0
       }
-    }
+    };
 
 })();
 
