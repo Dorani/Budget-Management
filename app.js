@@ -36,18 +36,19 @@ var budgetController = (function(){
 
     return {
         addItem: function(type, des, val){//method that takes in type, description and value of our input
-            var newItem, id;
-            //create new id
+            var newItem, ID;
+
+            //create new ID
             if (data.allItems[type].length > 0){
-                id = data.allItems[type][data.allItems[type].length -1].id + 1;
+                ID = data.allItems[type][data.allItems[type].length -1].id + 1;
             } else {
-              id = 0;
+              ID = 0;
             }
             //create new item based on 'income' or 'expense' type
             if(type === 'exp') {
-              newItem = new Expense(id, des, val);
+              newItem = new Expense(ID, des, val);
             } else if (type === 'inc') {
-              newItem = new Income(id, des, val);
+              newItem = new Income(ID, des, val);
             }
             //after we have a new item, we push it in our data structure
             data.allItems[type].push(newItem);//type is exp or inc, which are the same in our data structure, then push interval
