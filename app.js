@@ -96,11 +96,13 @@ var controller = (function(budegetCtrl, UICtrl){
       }
 
       var ctrlAddItem = function(){
-
+        var input, newItem;
         //1. get the field input Data
-        var input = UICtrl.getInput();
+        input = UICtrl.getInput();
 
         //2. add item to the budget Controller
+        newItem = budegetCtrl.addItem(input.type, input.description, input.value);
+
         //3. add the item to the UI
         //4. calculate the budget
         //5. display the budget on the UI
