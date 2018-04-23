@@ -37,12 +37,17 @@ var budgetController = (function(){
     return {
         addItem: function(type, des, val){//method that takes in type, description and value of our input
             var newItem;
+
+            id = 0;
+
             if(type === 'exp') {
               newItem new Expense(id, des, val);
             } else if (type === 'inc') {
               newItem = new Income(id, des, val);
             }
-
+            //after we have a new item, we store it in our data structure
+            data.allItems[type].push(newItem);//type is exp or inc, which are the same in our data structure, then push interval
+            return newItem;
         }
     };
 
