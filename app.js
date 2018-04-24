@@ -115,6 +115,8 @@ var UIController = (function(){
           fieldsArr.forEach(function(current, index, array){//loops through all of the elements of field arr
             current.value = "";//sets the value of all of them to an empty string
           });
+
+          fieldsArr[0].focus();//goes right back to description field
         },
 
         getDomstrings: function(){
