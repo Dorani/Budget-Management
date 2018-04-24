@@ -81,7 +81,7 @@ var UIController = (function(){
             //3 input values stored as parameters
             type: document.querySelector(Domstrings.inputType).value,//read the value,income or expens
             description: document.querySelector(Domstrings.inputDescription).value,
-            value: document.querySelector(Domstrings.inputValue).value
+            value: parseFloat(document.querySelector(Domstrings.inputValue).value)
           };
         },
 
