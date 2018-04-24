@@ -149,7 +149,7 @@ var controller = (function(budegetCtrl, UICtrl){
         UICtrl.addListItem(newItem, input.type);
 
         //4. clear the fields
-
+        UICtrl.clearFields();
         //5. calculate the budget
 
         //6. display the budget on the UI
