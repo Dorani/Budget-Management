@@ -102,7 +102,7 @@ var UIController = (function(){
             newHTML = newHTML.replace('%value%', obj.value);
 
             //insert the html in the dom
-            
+            document.querySelector(element).insertAdjacentHTML('beforeend', newHTML);
         },
 
         getDomstrings: function(){
