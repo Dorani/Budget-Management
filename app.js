@@ -135,6 +135,7 @@ var controller = (function(budegetCtrl, UICtrl){
         newItem = budegetCtrl.addItem(input.type, input.description, input.value);
 
         //3. add the item to the UI
+        UICtrl.addListItem(newItem, input.type);
         //4. calculate the budget
         //5. display the budget on the UI
 
