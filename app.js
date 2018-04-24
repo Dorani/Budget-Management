@@ -85,7 +85,7 @@ var UIController = (function(){
 
         addListItem: function(obj, type){
             //create html string with placeholder text
-            var html;
+            var html, newHTML;
 
             if (type === 'inc') {
               html = '<div class="item clearfix" id="income-%id%"> <div class="item__description">%description%</div> <div class="right clearfix"> <div class="item__value">%value%</div> <div class="item__delete"><button class="item__delete--btn">i class="ion-ios-close-outline"></i></button> </div></div> </div>'
@@ -93,7 +93,7 @@ var UIController = (function(){
               html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>'
             }
             //replace the placeholder text with some actual Data
-
+            newHTML = html.replace('%id', obj.id);//searches for a string and replaces that string with data we put into that method
             //inser the html in the dom
         },
 
