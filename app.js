@@ -68,8 +68,8 @@ var UIController = (function(){
       //central place where all strings are stored, we can then retrieve them and change them
       var Domstrings = {
         inputType: '.add__type',
-        description: '.add__description',
-        value: '.add__value',
+        inputDescription: '.add__description',
+        inputValue: '.add__value',
         inputBtn: '.add__btn',
         incomeContainer: '.income__list',
         expensesContainer: '.expenses__list'
@@ -80,8 +80,8 @@ var UIController = (function(){
           return {
             //3 input values stored as parameters
             type: document.querySelector(Domstrings.inputType).value,//read the value,income or expens
-            description: document.querySelector(Domstrings.description).value,
-            value: document.querySelector(Domstrings.value).value
+            description: document.querySelector(Domstrings.inputDescription).value,
+            value: document.querySelector(Domstrings.inputValue).value
           };
         },
 
@@ -107,7 +107,8 @@ var UIController = (function(){
 
         clearFields: function(){
           var fields, fieldsArr ;
-          fields = document.querySelectorAll(Domstrings.inputDescriptionn + ' ,' + Domstrings.inputValue);
+
+          fields = document.querySelectorAll(Domstrings.inputDescription + ' ,' + Domstrings.inputValue);
 
           fieldsArr = Array.prototype.slice.call(fields)//trick slice method into thinking we give it an array
 
