@@ -140,6 +140,12 @@ var controller = (function(budegetCtrl, UICtrl){
         });
       }
 
+      var updateBudget = function(){
+        //5. calculate the budget
+
+        //6. display the budget on the UI
+      }
+
       var ctrlAddItem = function(){
         var input, newItem;
         //1. get the field input Data
@@ -153,10 +159,6 @@ var controller = (function(budegetCtrl, UICtrl){
 
         //4. clear the fields
         UICtrl.clearFields();
-        //5. calculate the budget
-
-        //6. display the budget on the UI
-
       };
 
       return {
