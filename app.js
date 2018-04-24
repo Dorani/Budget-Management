@@ -161,6 +161,9 @@ var controller = (function(budegetCtrl, UICtrl){
 
         //4. clear the fields
         UICtrl.clearFields();
+
+        //5.calculate and update budget
+        updateBudget();
       };
 
       return {
