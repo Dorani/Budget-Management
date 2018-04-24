@@ -94,6 +94,8 @@ var UIController = (function(){
             }
             //replace the placeholder text with some actual Data
             newHTML = html.replace('%id', obj.id);//searches for a string and replaces that string with data we put into that method
+            newHTML = newHTML.replace('%description%', obj.description);
+            newHTML = newHTML.replace('%value%', obj.value);
             //inser the html in the dom
         },
 
