@@ -105,6 +105,17 @@ var UIController = (function(){
             document.querySelector(element).insertAdjacentHTML('beforeend', newHTML);
         },
 
+        clearFields: function(){
+          var fields, fieldsArr ;
+          fields = document.querySelectorAll(Domstrings.inputDescriptionn + ' ,' + Domstrings.inputValue);
+
+          fieldsArr = Array.prototype.slice.call(fields)//trick slice method into thinking we give it an array
+
+          fieldsArr.forEach(function(current, index, array){//loops through all of the elements of field arr
+            current.value = "";//sets the value of all of them to an empty string
+          });
+        },
+
         getDomstrings: function(){
           //exposing Domstrings into the public
             return Domstrings;
