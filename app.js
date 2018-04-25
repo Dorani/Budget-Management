@@ -111,7 +111,7 @@ var UIController = (function(){
         expensesContainer: '.expenses__list',
         budgetLabel: '.budget__value',
         incomeLable: '.budget__income--value',
-        expenseLable: '.budget__expense--value',
+        expensesLable: '.budget__expenses--value',
         percentageLabel: '.budget__expenses--percentage'
       }
 
@@ -134,7 +134,7 @@ var UIController = (function(){
               html = '<div class="item clearfix" id="income-%id%"> <div class="item__description">%description%</div> <div class="right clearfix"> <div class="item__value">%value%</div> <div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button> </div></div> </div>'
             } else if (type === 'exp') {
               element = Domstrings.expensesContainer;
-              html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>'
+              html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>'
             }
             //replace the placeholder text with some actual Data
             newHTML = html.replace('%id', obj.id);//searches for a string and replaces that string with data we put into that method
@@ -160,8 +160,18 @@ var UIController = (function(){
         },
 
         displayBudget: function(obj){
+            document.querySelector(Domstrings.budgetLabel).textContent = obj.budget;
+            document.querySelector(Domstrings.incomeLable).textContent = obj.totalInc;
+            document.querySelector(Domstrings.expensesLable).textContent = obj.totalExp;
+            document.querySelector(Domstrings.percentageLabel).textContent = obj.percentage;
 
-        }
+            if (obj.percentage > 0 ){
+              document.querySelector(Domstrings.percentageLabel).textContent = obj.percentage + '%';
+            } else {
+              document.querySelector(Domstrings.percentageLabel).textContent = '----';
+
+            }
+        },
 
         getDomstrings: function(){
           //exposing Domstrings into the public
@@ -190,7 +200,7 @@ var controller = (function(budegetCtrl, UICtrl){
         //2. return budget
         var budget = budegetCtrl.getBudget();
         //3. display the budget on the UI
-        console.log(budget);
+        UICtrl.displayBudget(budget);
       }
 
       var ctrlAddItem = function(){
