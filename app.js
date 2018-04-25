@@ -108,7 +108,11 @@ var UIController = (function(){
         inputValue: '.add__value',
         inputBtn: '.add__btn',
         incomeContainer: '.income__list',
-        expensesContainer: '.expenses__list'
+        expensesContainer: '.expenses__list',
+        budgetLabel: '.budget__value',
+        incomeLable: '.budget__income--value',
+        expenseLable: '.budget__expense--value',
+        percentageLabel: '.budget__expenses--percentage'
       }
 
       return {
@@ -154,6 +158,10 @@ var UIController = (function(){
 
           fieldsArr[0].focus();//goes right back to description field
         },
+
+        displayBudget: function(obj){
+
+        }
 
         getDomstrings: function(){
           //exposing Domstrings into the public
