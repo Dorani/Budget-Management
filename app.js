@@ -25,7 +25,7 @@ var budgetController = (function(){
     var calculateTotal = function(type){
       var sum = 0;
       data.allItems[type].forEach(function(cur){
-        sum = sum + cur.value;
+        sum += cur.value;
       });
     };
 
