@@ -154,7 +154,7 @@ var controller = (function(budegetCtrl, UICtrl){
         input = UICtrl.getInput();
 
         //input description should not be empty, and the number should not be (not a number) AND value should always be greater than 0
-        if (input.description !== "" && !isNan(input.value) && input.value > 0){
+        if (input.description !== "" && !isNaN(input.value) && input.value > 0){
           //2. add item to the budget Controller
           newItem = budegetCtrl.addItem(input.type, input.description, input.value);
 
