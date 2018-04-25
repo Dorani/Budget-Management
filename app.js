@@ -27,6 +27,7 @@ var budgetController = (function(){
       data.allItems[type].forEach(function(cur){
         sum += cur.value;
       });
+      data.totals[type] = sum;
     };
 
 //data structure ready to receive data
