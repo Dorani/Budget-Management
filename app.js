@@ -159,7 +159,8 @@ var controller = (function(budegetCtrl, UICtrl){
 
       var updateBudget = function(){
         //1. calculate the budget
-
+        calculateTotal('exp');
+        calculateTotal('inc');
         //2. return the budget
 
         //3. display the budget on the UI
