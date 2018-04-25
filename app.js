@@ -39,7 +39,8 @@ var budgetController = (function(){
       totals: {
         exp: 0,
         inc: 0
-      }
+      },
+      budget: 0
     };
 
     return {
@@ -161,8 +162,8 @@ var controller = (function(budegetCtrl, UICtrl){
         //1. calculate the budget
         calculateTotal('exp');
         calculateTotal('inc');
-        //2. return the budget
-
+        //2. calculate the budget: income - expenses
+        
         //3. display the budget on the UI
       }
 
