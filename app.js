@@ -163,7 +163,7 @@ var controller = (function(budegetCtrl, UICtrl){
         calculateTotal('exp');
         calculateTotal('inc');
         //2. calculate the budget: income - expenses
-        
+        data.budget = data.totals.inc - data.totals.exp;
         //3. display the budget on the UI
       }
 
