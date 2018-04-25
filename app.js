@@ -155,19 +155,18 @@ var controller = (function(budegetCtrl, UICtrl){
 
         //input description should not be empty, and the number should not be (not a number) AND value should always be greater than 0
         if (input.description !== "" && !isNan(input.value) && input.value > 0){
-          //code section 2.-5.
+          //2. add item to the budget Controller
+          newItem = budegetCtrl.addItem(input.type, input.description, input.value);
+
+          //3. add the item to the UI
+          UICtrl.addListItem(newItem, input.type);
+
+          //4. clear the fields
+          UICtrl.clearFields();
+
+          //5.calculate and update budget
+          updateBudget();
         }
-        //2. add item to the budget Controller
-        newItem = budegetCtrl.addItem(input.type, input.description, input.value);
-
-        //3. add the item to the UI
-        UICtrl.addListItem(newItem, input.type);
-
-        //4. clear the fields
-        UICtrl.clearFields();
-
-        //5.calculate and update budget
-        updateBudget();
       };
 
       return {
