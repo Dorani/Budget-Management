@@ -22,6 +22,10 @@ var budgetController = (function(){
       this.value = value;
     };
 
+    var calculateTotal = function(type){
+
+    };
+
 //data structure ready to receive data
     var data = {
       allItems: {
