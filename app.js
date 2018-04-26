@@ -76,8 +76,13 @@ var budgetController = (function(){
             ids = data.allItems[type].map(function(){//map returns a brand new array
               return current.id;
             });
-
+            //return index
             index = ids.indexOf(id);//returns the index number of the element of the array we input here
+            //delete item from array now:
+            if (index !=== -1){//if index is diff from -1 delete
+
+            }
+
         },
 
         calculateBudget: function(){
