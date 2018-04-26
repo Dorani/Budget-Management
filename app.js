@@ -228,11 +228,12 @@ var controller = (function(budegetCtrl, UICtrl){
       };
 
       var ctrlDeleteItem = function(event){
-          var itemID;
+          var itemID, splitID;
           itemID = (event.target.parentNode.parentNode.parentNode.parentNode.id);//element where event was fired, returns an html node in the DOM
 
           if (itemID) {
-
+            //inc-1
+            splitID = itemID.split('-');//allows us to break up a string into diff parts, convert to array
           }
       }
 
