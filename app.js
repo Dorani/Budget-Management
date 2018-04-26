@@ -68,10 +68,6 @@ var budgetController = (function(){
 
         deleteItem: function(type, id){
           var ids, index;
-          //id = 6
-          //data.allItems[type][id];
-          //ids = [1 2 4 6 8]
-          //index = 3
             //loop over all the elements in an inc or expense array
             ids = data.allItems[type].map(function(){//map returns a brand new array
               return current.id;
@@ -257,7 +253,7 @@ var controller = (function(budegetCtrl, UICtrl){
             ID = splitID[1];//id, second element
 
             //1.delete the item from the data structure
-
+            budegetCtrl.deleteItem(type, id);
             //2.delete the tiem from UI
 
             //3. update and show the new budget
