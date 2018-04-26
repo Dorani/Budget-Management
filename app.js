@@ -66,6 +66,13 @@ var budgetController = (function(){
             return newItem;
         },
 
+        deleteItem: function(type, id){
+            //loop over all the elements in an inc or expense array
+            data.allItems[type].map(function(){//map returns a brand new array
+                return 2;
+            });
+        },
+
         calculateBudget: function(){
 
           //1. calculate the budget
