@@ -237,7 +237,11 @@ var controller = (function(budegetCtrl, UICtrl){
             type = splitID[0];//inc or exp are the types
             ID = splitID[1];//id, second element
 
+            //1.delete the item from the data structure
 
+            //2.delete the tiem from UI
+
+            //3. update and show the new budget
 
           }
       }
