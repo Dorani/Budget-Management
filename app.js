@@ -260,7 +260,7 @@ var controller = (function(budegetCtrl, UICtrl){
             //1.delete the item from the data structure
             budegetCtrl.deleteItem(type, ID);
             //2.delete the tiem from UI
-
+            UICtrl.deleteListItem(itemID);
             //3. update and show the new budget
 
           }
