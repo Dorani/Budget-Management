@@ -228,7 +228,7 @@ var controller = (function(budegetCtrl, UICtrl){
       };
 
       var ctrlDeleteItem = function(event){
-          console.log(event.target);//element where event was fired, returns an html node in the DOM
+          console.log(event.target.parentNode);//element where event was fired, returns an html node in the DOM
       }
 
       return {
