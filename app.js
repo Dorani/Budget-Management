@@ -75,7 +75,7 @@ var budgetController = (function(){
             //return index
             index = ids.indexOf(id);//returns the index number of the element of the array we input here
             //delete item from array now:
-            if (index !=== -1){//if index is diff from -1 delete
+            if (index !== -1){//if index is diff from -1 delete
               data.allItems[type].splice(index, 1);//1st argument is the index we wamt to delete, 2nd is the number of elements we want to delete which is 1
             }
 
