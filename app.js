@@ -67,14 +67,17 @@ var budgetController = (function(){
         },
 
         deleteItem: function(type, id){
+          var ids, index;
           //id = 6
           //data.allItems[type][id];
           //ids = [1 2 4 6 8]
           //index = 3
             //loop over all the elements in an inc or expense array
-            var ids = data.allItems[type].map(function(){//map returns a brand new array
+            ids = data.allItems[type].map(function(){//map returns a brand new array
               return current.id;
             });
+
+            index = ids.indexOf(id);//returns the index number of the element of the array we input here
         },
 
         calculateBudget: function(){
