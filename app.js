@@ -161,6 +161,11 @@ var UIController = (function(){
             document.querySelector(element).insertAdjacentHTML('beforeend', newHTML);
         },
 
+        deleteListItem: function(selectorID){//which will be the entireID, so we can delete the item
+          var el = document.getElementByID(selectorID);
+          el.parentNode.removeChild(el);//move up in the dom by traversing with the parentNode method, then remove the child elememt
+        },
+
         clearFields: function(){
           var fields, fieldsArr ;
 
