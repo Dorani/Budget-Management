@@ -69,7 +69,7 @@ var budgetController = (function(){
         deleteItem: function(type, id){
           var ids, index;
             //loop over all the elements in an inc or expense array
-            ids = data.allItems[type].map(function(){//map returns a brand new array
+            ids = data.allItems[type].map(function(current){//map returns a brand new array
               return current.id;
             });
             //return index
@@ -250,7 +250,7 @@ var controller = (function(budegetCtrl, UICtrl){
             //all the ingredients to delete the item from our UI and data Controller
             splitID = itemID.split('-');//allows us to break up a string into diff parts, convert to array
             type = splitID[0];//inc or exp are the types
-            ID = splitID[1];//id, second element
+            ID = parseInt(splitID[1]);//id, second element, convert string to integer
 
             //1.delete the item from the data structure
             budegetCtrl.deleteItem(type, ID);
