@@ -132,10 +132,10 @@ var UIController = (function(){
 
             if (type === 'inc') {
               element = Domstrings.incomeContainer;
-              html = '<div class="item clearfix" id="income-%id%"> <div class="item__description">%description%</div> <div class="right clearfix"> <div class="item__value">%value%</div> <div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button> </div></div> </div>'
+              html = '<div class="item clearfix" id="inc-%id%"> <div class="item__description">%description%</div> <div class="right clearfix"> <div class="item__value">%value%</div> <div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button> </div></div> </div>'
             } else if (type === 'exp') {
               element = Domstrings.expensesContainer;
-              html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>'
+              html = '<div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>'
             }
             //replace the placeholder text with some actual Data
             newHTML = html.replace('%id', obj.id);//searches for a string and replaces that string with data we put into that method
@@ -230,6 +230,10 @@ var controller = (function(budegetCtrl, UICtrl){
       var ctrlDeleteItem = function(event){
           var itemID;
           itemID = (event.target.parentNode.parentNode.parentNode.parentNode.id);//element where event was fired, returns an html node in the DOM
+
+          if (itemID) {
+
+          }
       }
 
       return {
