@@ -227,6 +227,10 @@ var controller = (function(budegetCtrl, UICtrl){
         }
       };
 
+      var ctrlDeleteItem = function(event){
+          console.log(event.target);//element where event was fired
+      }
+
       return {
         init: function(){
           console.log('app has started');
