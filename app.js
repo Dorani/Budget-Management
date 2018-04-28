@@ -256,8 +256,9 @@ var controller = (function(budegetCtrl, UICtrl){
         //1.calculate the percentages
         budegetCtrl.calculatePercentages();
         //2.read percentages from the budget Controller
-
+        var percentages = budegetCtrl.getPercentages();
         //3.update the UI with the new percentages
+        console.log(percentages);
       }
 
       var ctrlAddItem = function(){
