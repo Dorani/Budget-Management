@@ -280,7 +280,7 @@ var controller = (function(budegetCtrl, UICtrl){
         //2.read percentages from the budget Controller
         var percentages = budegetCtrl.getPercentages();
         //3.update the UI with the new percentages
-        console.log(percentages);
+        UICtrl.displayPercentages(percentages);
       }
 
       var ctrlAddItem = function(){
