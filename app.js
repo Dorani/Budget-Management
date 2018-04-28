@@ -223,7 +223,13 @@ var UIController = (function(){
         },
 
         displayPercentages: function(percentages){
+            var fields = document.querySelectorAll(Domstrings.expensesLable);
 
+            var nodeListForEach = function(list, callback){
+              for (var i = 0; i < list.length; i++){
+                callback(list[i], i);
+              }
+            }
         },
 
         getDomstrings: function(){
