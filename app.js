@@ -230,11 +230,17 @@ var UIController = (function(){
                 callback(list[i], i);
               }
             }
-        },
 
         nodeListForEach(fields, function(current,index){
-            current.textContent = percentages[index] + '%';//1st element we want 1 perc, at 2nd element we want 2nd perc
-        });
+            if (percentages[index] > 0){
+              current.textContent = percentages[index] + '%';//1st element we want 1 perc, at 2nd element we want 2nd perc
+            } else {
+              current.textContent = '---';//1st element we want 1 perc, at 2nd element we want 2nd perc
+            }
+         });
+
+        },
+
 
         getDomstrings: function(){
           //exposing Domstrings into the public
