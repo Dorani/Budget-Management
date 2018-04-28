@@ -26,7 +26,7 @@ var budgetController = (function(){
     };
 
     Expense.prototype.getPercentage = function(){
-      return.this.percentage;
+      return this.percentage;
     }
 
     var Income = function(id, description, value){
@@ -218,6 +218,10 @@ var UIController = (function(){
               document.querySelector(Domstrings.percentageLabel).textContent = '----';
 
             }
+        },
+
+        displayPercentages: function(percentages){
+          
         },
 
         getDomstrings: function(){
