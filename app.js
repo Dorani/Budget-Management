@@ -249,8 +249,11 @@ var UIController = (function(){
           num = num.toFixed(2);//method of the number prototype - always put exactly 2 deci on the number
 
           numSplit = num.split('.')//devide the num that we input into 2 parts, integer and decimal and stored in an array
-          int = numSplit[0];
 
+          int = numSplit[0];
+          if(int.length > 3) {
+            int.substr(0, int.length - 3) + ',' + int.substr(int.length - 3, int.length);//start a pos 0 and read 3 num - to get 1,000
+          }
 
           dec = numSplit[1];
         }
