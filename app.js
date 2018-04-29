@@ -242,6 +242,13 @@ var UIController = (function(){
 
         },
 
+        formatNumber: function(num, type){
+          num = Math.abs(num);
+          num = num.toFixed(2);//method of the number prototype - always put exactly 2 deci on the number
+
+          
+        }
+
         getDomstrings: function(){
           //exposing Domstrings into the public
             return Domstrings;
