@@ -278,6 +278,11 @@ var UIController = (function(){
             document.querySelector(Domstrings.dateLabel).textContent = months[month] + ' ' +year;
         },
 
+        changedType: function() {
+            //select all 3 elements that receive the red-focus class 
+            //then receive the botton with red class
+        },
+
         getDomstrings: function(){
           //exposing Domstrings into the public
             return Domstrings;
@@ -299,6 +304,7 @@ var controller = (function(budegetCtrl, UICtrl){
         });
 
         document.querySelector(Dom.container).addEventListener('click', ctrlDeleteItem);
+        document.querySelector(Dom.inputType).addEventListener('change', UICtrl.changedType);
       };
 
       var updateBudget = function(){
