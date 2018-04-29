@@ -256,6 +256,8 @@ var UIController = (function(){
           }
 
           dec = numSplit[1];
+
+          return (type === 'exp' ? sign = '-' : sign = '+') + ' ' + int + dec
         }
 
         getDomstrings: function(){
