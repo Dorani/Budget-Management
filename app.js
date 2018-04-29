@@ -265,12 +265,12 @@ var UIController = (function(){
         },
 
         displayMonth: function() {
-            var now, year, month;
+            var now, year;
 
             now = new Date();//store the date of the day in the now var
-            year = now.getFullYear;//this obj now inherets a bunch of method from the date prototype - return our current year
+            year = now.getFullYear();//this obj now inherets a bunch of method from the date prototype - return our current year
             //change content to our year
-            document.querySelector(Domstrings.dateLable).textContent = year;
+            document.querySelector(Domstrings.dateLabel).textContent = year;
         },
 
         getDomstrings: function(){
@@ -362,6 +362,7 @@ var controller = (function(budegetCtrl, UICtrl){
       return {
         init: function(){
           console.log('app has started');
+          UICtrl.displayMonth();
           UICtrl.displayBudget({
             budget: 0,
             totalInc: 0,
