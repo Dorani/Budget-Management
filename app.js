@@ -169,12 +169,12 @@ var UIController = (function(){
 
         int = numSplit[0];
         if(int.length > 3) {
-          int.substr(0, int.length - 3) + ',' + int.substr(int.length - 3, 3);//start a pos 0 and read 3 num - to get 1,000
+          int = int.substr(0, int.length - 3) + ',' + int.substr(int.length - 3, 3);//start a pos 0 and read 3 num - to get 1,000
         }
 
         dec = numSplit[1];
 
-        return (type === 'exp' ? sign = '-' : sign = '+') + ' ' + int + dec
+        return (type === 'exp' ? '-' : '+') + ' ' + int + '.' + dec;
       };
 
 
