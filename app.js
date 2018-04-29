@@ -157,7 +157,26 @@ var UIController = (function(){
         container: '.container',
         expensesPercLable: '.item__percentage'
 
-      }
+      };
+
+      var formatNumber = function(num, type){
+        var numSplit, int, dec;
+
+        num = Math.abs(num);
+        num = num.toFixed(2);//method of the number prototype - always put exactly 2 deci on the number
+
+        numSplit = num.split('.')//devide the num that we input into 2 parts, integer and decimal and stored in an array
+
+        int = numSplit[0];
+        if(int.length > 3) {
+          int.substr(0, int.length - 3) + ',' + int.substr(int.length - 3, 3);//start a pos 0 and read 3 num - to get 1,000
+        }
+
+        dec = numSplit[1];
+
+        return (type === 'exp' ? sign = '-' : sign = '+') + ' ' + int + dec
+      };
+
 
       return {
         getInput: function(){
@@ -241,24 +260,6 @@ var UIController = (function(){
          });
 
         },
-
-        formatNumber: function(num, type){
-          var numSplit, int, dec;
-
-          num = Math.abs(num);
-          num = num.toFixed(2);//method of the number prototype - always put exactly 2 deci on the number
-
-          numSplit = num.split('.')//devide the num that we input into 2 parts, integer and decimal and stored in an array
-
-          int = numSplit[0];
-          if(int.length > 3) {
-            int.substr(0, int.length - 3) + ',' + int.substr(int.length - 3, 3);//start a pos 0 and read 3 num - to get 1,000
-          }
-
-          dec = numSplit[1];
-
-          return (type === 'exp' ? sign = '-' : sign = '+') + ' ' + int + dec
-        }
 
         getDomstrings: function(){
           //exposing Domstrings into the public
