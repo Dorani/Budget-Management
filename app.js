@@ -155,8 +155,8 @@ var UIController = (function(){
         expensesLable: '.budget__expenses--value',
         percentageLabel: '.budget__expenses--percentage',
         container: '.container',
-        expensesPercLable: '.item__percentage'
-
+        expensesPercLable: '.item__percentage',
+        dateLabel: '.budget__title--month'
       };
 
       var formatNumber = function(num, type){
@@ -269,6 +269,8 @@ var UIController = (function(){
 
             now = new Date();//store the date of the day in the now var
             year = now.getFullYear;//this obj now inherets a bunch of method from the date prototype - return our current year
+            //change content to our year
+            document.querySelector(Domstrings.dateLable).textContent = year;
         },
 
         getDomstrings: function(){
