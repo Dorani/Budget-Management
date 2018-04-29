@@ -265,12 +265,17 @@ var UIController = (function(){
         },
 
         displayMonth: function() {
-            var now, year;
+            var now, year, months, month;
 
             now = new Date();//store the date of the day in the now var
+
+            months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+             'August', 'September', 'October', 'November', 'December'];
+            month = now.getMonth();
+
             year = now.getFullYear();//this obj now inherets a bunch of method from the date prototype - return our current year
             //change content to our year
-            document.querySelector(Domstrings.dateLabel).textContent = year;
+            document.querySelector(Domstrings.dateLabel).textContent = months[month] + ' ' +year;
         },
 
         getDomstrings: function(){
