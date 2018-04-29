@@ -264,6 +264,13 @@ var UIController = (function(){
 
         },
 
+        displayMonth: function() {
+            var now, year, month;
+
+            now = new Date();//store the date of the day in the now var
+            year = now.getFullYear;//this obj now inherets a bunch of method from the date prototype - return our current year
+        },
+
         getDomstrings: function(){
           //exposing Domstrings into the public
             return Domstrings;
