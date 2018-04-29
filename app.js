@@ -299,7 +299,7 @@ var controller = (function(budegetCtrl, UICtrl){
         });
 
         document.querySelector(Dom.container).addEventListener('click', ctrlDeleteItem);
-      }
+      };
 
       var updateBudget = function(){
         //1. calculate the budget
