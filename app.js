@@ -177,6 +177,11 @@ var UIController = (function(){
         return (type === 'exp' ? '-' : '+') + ' ' + int + '.' + dec;
       };
 
+      var nodeListForEach = function(list, callback){
+        for (var i = 0; i < list.length; i++){
+          callback(list[i], i);
+        }
+      };
 
       return {
         getInput: function(){
@@ -248,12 +253,6 @@ var UIController = (function(){
 
             var fields = document.querySelectorAll(Domstrings.expensesPercLable);
 
-            var nodeListForEach = function(list, callback){
-              for (var i = 0; i < list.length; i++){
-                callback(list[i], i);
-              }
-            };
-
         nodeListForEach(fields, function(current,index){
             if (percentages[index] > 0){
               current.textContent = percentages[index] + '%';//1st element we want 1 perc, at 2nd element we want 2nd perc
@@ -279,7 +278,12 @@ var UIController = (function(){
         },
 
         changedType: function() {
-            //select all 3 elements that receive the red-focus class 
+            //select all 3 elements that receive the red-focus class
+            var fields = document.querySelectorAll(
+              Domstrings.inputType + ',' +
+              Domstrings.inputDescription + ',' +
+              Domstrings.inputValue);
+            );
             //then receive the botton with red class
         },
 
