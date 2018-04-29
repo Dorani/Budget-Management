@@ -288,6 +288,7 @@ var UIController = (function(){
               //then receive the botton with red class
               cur.classList.toggle('red-focus');//adds red focus when its not there, and when its there removes it.
             });
+            document.querySelector(Domstrings.inputBtn).classList.toggle('red');//toggle button when we switch type
         },
 
         getDomstrings: function(){
