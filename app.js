@@ -283,8 +283,11 @@ var UIController = (function(){
               Domstrings.inputType + ',' +
               Domstrings.inputDescription + ',' +
               Domstrings.inputValue);
-            );
-            //then receive the botton with red class
+
+            nodeListForEach(fields, function(cur){
+              //then receive the botton with red class
+              cur.classList.toggle('red-focus');//adds red focus when its not there, and when its there removes it.
+            });
         },
 
         getDomstrings: function(){
